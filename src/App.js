@@ -21,7 +21,7 @@ function App({ login }) {
   }, [login]);
 
   if (loading) 
-    return <h1>...loading...........</h1>;
+    return <h1>...loading....</h1>;
   if (error) 
     return <pre>{JSON.stringify(error, null, 2)}</pre>;
   if (!data) 
@@ -39,18 +39,6 @@ function App({ login }) {
         </div>
   );
 
-    return (
-
-              <div>
-              <h1>{data.name}</h1>
-              <p>{data.location}</p>
-              <img alt={data.login} src={data.avatar_url}/>
-              <p>perfil creado el: {data.created_at}</p>
-              </div>
-
-    );
-
-    
 
 }
 export default App;
